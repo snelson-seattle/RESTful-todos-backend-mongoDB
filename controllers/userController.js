@@ -109,10 +109,10 @@ const deleteUser = asyncHandler(async (req, res) => {
       .json({ message: "An id is required for this operation." });
   }
 
-  const todos = await Todo.findOne({ user: id }).lean().exec();
+  const todos = await Todo.find({ userId: id }).lean().exec();
 
   if (todos?.length) {
-    return res.status(400).json({ message: "User has todos." });
+    return res.status(400).json({ message: "Unable to delete, user has todos." });
   }
 
   const user = await User.findById(id).exec();

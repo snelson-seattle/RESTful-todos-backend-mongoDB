@@ -19,12 +19,6 @@ const userSchema = new mongoose.Schema({
     required: true,
     minlength: 8,
   },
-  todos: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Todo",
-    },
-  ],
 });
 
 userSchema.pre("save", async function (next) {
