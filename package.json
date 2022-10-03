@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/snelson-seattle/RESTful-todos-backend-mongoDB#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
     "mongoose": "^6.6.3"
   }
 }
